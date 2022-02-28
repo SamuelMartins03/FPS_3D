@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    #region Fields
     //Look related
     [SerializeField] float mouseSensitivity = 100f;
     [SerializeField] Transform camera;
@@ -20,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
     [SerializeField] float jumpHeigh = 3f;
+    #endregion
 
     // Start is called before the first frame update
     void Start()
@@ -36,16 +39,6 @@ public class PlayerMovement : MonoBehaviour
         Jump();
     }
 
-    private void Jump()
-    {
-        if (Input.GetKeyDown("space") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeigh * -2f * gravity);
-            Debug.Log("ups");
-            controller.Move(velocity * Time.deltaTime);
-        }
-    }
-
     private void ApplyGravity()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -59,17 +52,6 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
     }
-
-    private void Move()
-    {
-        // Get the input values
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-        //Apply that values
-        Vector3 move = transform.right * x + transform.forward * z;
-        controller.Move(move * speed * Time.deltaTime);
-    }
-
     private void Look()
     {
         //Get mouse input
@@ -84,6 +66,22 @@ public class PlayerMovement : MonoBehaviour
         camera.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
     }
-
-
+    private void Move()
+    {
+        // Get the input values
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+        //Apply that values
+        Vector3 move = transform.right * x + transform.forward * z;
+        controller.Move(move * speed * Time.deltaTime);
+    }
+    private void Jump()
+    {
+        if (Input.GetKeyDown("space") && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeigh * -2f * gravity);
+            Debug.Log("ups");
+            controller.Move(velocity * Time.deltaTime);
+        }
+    }
 }
