@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public float firePower = 10f;
-    public float range = 100f;
+    [SerializeField] float firePower = 10f;
+    [SerializeField] float range = 100f;
 
-    public Camera fpsCam;
-    public ParticleSystem muzzleFlash;
-    public AudioSource shootSound;
+    [SerializeField] Camera fpsCam;
+    [SerializeField] ParticleSystem muzzleFlash;
+    [SerializeField] AudioSource shootSound;
+
+    [SerializeField] GameObject impactEffect;
 
     // Update is called once per frame
     void Update()
@@ -18,7 +20,6 @@ public class Gun : MonoBehaviour
             TriggerShoot();
         }
     }
-
     private void TriggerShoot()
     {
         Shoot();
@@ -38,6 +39,8 @@ public class Gun : MonoBehaviour
             {
                 target.TakeDamage(firePower);
             }
+            GameObject impactGo = Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impactGo, 1.5f);
         }
     }
 }
