@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  viewDamageAmount: {fileID: 5191796108633881502, guid: 1e0b35fd787f16d4988198f5d6b3bef2, type: 3}
 --- !u!1 &195612218
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  viewDamageAmount: {fileID: 5191796108633881502, guid: 1e0b35fd787f16d4988198f5d6b3bef2, type: 3}
 --- !u!1 &198184878
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,6 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  viewDamageAmount: {fileID: 5191796108633881502, guid: 1e0b35fd787f16d4988198f5d6b3bef2, type: 3}
 --- !u!1 &412795654
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +586,7 @@ MonoBehaviour:
   fpsCam: {fileID: 963194227}
   muzzleFlash: {fileID: 692936215}
   shootSound: {fileID: 414546936}
-  impactEffect: {fileID: 8360739398467987619, guid: f8eb177b8e8dae747baaf2348326ef19, type: 3}
+  impactEffect: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00, type: 3}
 --- !u!82 &414546936
 AudioSource:
   m_ObjectHideFlags: 0
@@ -789,6 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  viewDamageAmount: {fileID: 5191796108633881502, guid: 1e0b35fd787f16d4988198f5d6b3bef2, type: 3}
 --- !u!1 &692936212
 GameObject:
   m_ObjectHideFlags: 0
@@ -5968,6 +5972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  viewDamageAmount: {fileID: 5191796108633881502, guid: 1e0b35fd787f16d4988198f5d6b3bef2, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -6161,6 +6166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+  viewDamageAmount: {fileID: 5191796108633881502, guid: 1e0b35fd787f16d4988198f5d6b3bef2, type: 3}
 --- !u!1 &1388926215
 GameObject:
   m_ObjectHideFlags: 0
@@ -6428,36 +6434,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541528948}
   m_CullTransparentMesh: 1
---- !u!1 &1617004430
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1617004431}
-  m_Layer: 0
-  m_Name: ImpactEffect
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1617004431
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617004430}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.44, z: 2.807}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693038264
 GameObject:
   m_ObjectHideFlags: 0
